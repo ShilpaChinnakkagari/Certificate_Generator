@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Certificate Generator</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+</head>
+<body class="bg-light">
+    <div class="container mt-5">
+        <h2 class="mb-4 text-center">Certificate Generator</h2>
+        <form method="POST" enctype="multipart/form-data">
+            <div class="mb-3">
+                <label class="form-label">Participant Name</label>
+                <input type="text" name="name" class="form-control" required>
+            </div>
+            <div class="mb-3">
+                <label class="form-label">Department</label>
+                <input type="text" name="department" class="form-control" required>
+            </div>
+            <div class="mb-3">
+                <label class="form-label">Event Participated</label>
+                <input type="text" name="event" class="form-control" required>
+            </div>
+            <button type="submit" class="btn btn-primary">Generate Certificate</button>
+        </form>
+
+        <hr>
+
+        <h4 class="text-center">Or Upload an Excel File to Generate Certificates for Multiple Participants</h4>
+        <form method="POST" enctype="multipart/form-data">
+            <div class="mb-3">
+                <label class="form-label">Upload Excel File</label>
+                <input type="file" name="file" class="form-control" accept=".xlsx" required>
+            </div>
+            <button type="submit" class="btn btn-primary">Generate Certificates from Excel</button>
+        </form>
+    </div>
+</body>
+</html>
